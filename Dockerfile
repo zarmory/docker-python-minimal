@@ -17,6 +17,11 @@ RUN find /usr/local/include/python* -not -name pyconfig.h -type f -exec rm {} \;
 RUN find /usr/local/bin -not -name 'python*' \( -type f -o -type l \) -exec rm {} \;
 RUN rm -rf /usr/local/share/*
 
+# The final image
 FROM alpine:$ALPINE_VER as final
-RUN apk add --no-cache libbz2 expat libffi xz-libs sqlite-libs readline
+
+ENV LANG C.UTF-8
+RUN apk add --no-cache libbz2 expat libffi xz-libs sqlite-libs readline ca-certificates
 COPY --from=builder /usr/local/ /usr/local/
+
+CMD ["python3"]
