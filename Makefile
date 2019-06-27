@@ -3,7 +3,7 @@ PY_VERSIONS = 3.6.8 3.7.3
 ALPINE_VER = 3.8
 
 PUSH_REPO = haizaar/python-minimal
-PUSH_REVISION = 5
+PUSH_REVISION = 6
 TAG = $(PUSH_REPO):$*-alpine$(ALPINE_VER)-$(PUSH_REVISION)
 
 # Note - don't call these rules just "python" or "push
