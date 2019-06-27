@@ -10,7 +10,7 @@ RUN set -ex && \
     rm -rf *.o *.a
 RUN rm -rf /usr/local/lib/python*/ensurepip
 RUN rm -rf /usr/local/lib/python*/idlelib
-RUN rm -rf /usr/local/lib/python*/distutils
+RUN rm -rf /usr/local/lib/python*/distutils/command
 RUN rm -rf /usr/local/lib/python*/lib2to2
 RUN rm -rf /usr/local/lib/python*/__pycache__/*
 RUN find /usr/local/include/python* -not -name pyconfig.h -type f -exec rm {} \;
