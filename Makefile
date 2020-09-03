@@ -1,5 +1,5 @@
 
-PY_VERSIONS = 3.6.11 3.7.8 3.8.3
+PY_VERSIONS = 3.6.12 3.7.9 3.8.5
 ALPINE_VERSIONS = 3.11 3.12
 
 PUSH_REPO = haizaar/python-minimal
